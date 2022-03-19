@@ -1,5 +1,6 @@
 * {
   font-size: 18px;
+  font-family: "Poppins", sans-serif;
 }
 
 .team {
@@ -10,10 +11,11 @@
   display: flex;
 }
 
-.team-header > h1 {
+.team-header-title {
   font-weight: bold;
   font-size: 36px;
   line-height: 48px;
+  font-family: "PT Serif", sans-serif;
 }
 
 .team-header-detail {
@@ -27,6 +29,8 @@
 
 .team-header-detail-string {
   margin-top: 10px;
+  margin-bottom: 96px;
+  width: 400px;
 }
 
 .team-members {
@@ -34,6 +38,14 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   grid-auto-rows: minmax(100px, auto);
+}
+
+.team-member {
+  position: relative;
+}
+
+.team-member:nth-child(2) {
+  margin-top: 50px;
 }
 
 .team-member > img {
@@ -44,9 +56,26 @@
   font-weight: 600;
 }
 
+.team-member-job {
+  font-family: "PT Serif", sans-serif;
+  font-size: 12px;
+  writing-mode: vertical-rl;
+  position: absolute;
+  top: 0;
+  right: 40px;
+}
+
 footer {
   margin-top: 115px;
   text-align: center;
+  color: #a9a9a9;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-user-name {
+  font-size: inherit;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 767px) {
@@ -60,6 +89,10 @@ footer {
     margin-top: 38px;
     margin-left: 0;
   }
+  .team-header-detail-string {
+    width: 100%;
+    margin-bottom: 0;
+  }
   .team-members {
     margin-top: 66px;
     grid-template-columns: repeat(2, 1fr);
@@ -68,8 +101,10 @@ footer {
   .team-member > img {
     width: 50%;
   }
+  .team-member-job {
+    right: 80px;
+  }
   footer {
     margin-top: 134px;
-    text-align: center;
   }
 }
