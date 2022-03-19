@@ -4,11 +4,13 @@
 }
 
 .team {
-  margin: 110px 240px 14px;
+  margin: 0 auto;
+  padding: 0 16%;
 }
 
 .team-header {
   display: flex;
+  margin-top: 80px;
 }
 
 .team-header-title {
@@ -16,10 +18,10 @@
   font-size: 36px;
   line-height: 48px;
   font-family: "PT Serif", sans-serif;
+  flex-grow: 1;
 }
 
 .team-header-detail {
-  margin-left: 215px;
 }
 
 .team-header-detail-title {
@@ -44,7 +46,8 @@
   position: relative;
 }
 
-.team-member:nth-child(2) {
+.team-member:nth-child(2),
+.team-member:nth-child(5) {
   margin-top: 50px;
 }
 
@@ -62,7 +65,7 @@
   writing-mode: vertical-rl;
   position: absolute;
   top: 0;
-  right: 40px;
+  right: 15%;
 }
 
 footer {
@@ -98,11 +101,14 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
   }
+  .team-member:nth-child(2n) {
+    margin-top: 50px;
+  }
+  .team-member:nth-child(5) {
+    margin-top: 0;
+  }
   .team-member > img {
     width: 50%;
-  }
-  .team-member-job {
-    right: 80px;
   }
   footer {
     margin-top: 134px;
